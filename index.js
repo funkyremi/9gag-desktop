@@ -10,10 +10,3 @@ var mb = menubar({
 mb.on('ready', function ready () {
 	console.log('app is ready')
 });
-
-mb.on('after-create-window', () => {
-	let html = mb.window.webContents;
-	html.on('dom-ready', () => {
-		html.executeJavaScript(`document.getElementsByClassName("salty-bottom-ad")[0].style='height:0px !important;'`);
-	});
-});
