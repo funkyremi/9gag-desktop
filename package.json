@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "electron-packager . 9gag-menubar --platform=darwin --arch=x64 --electron-version=2.0.3 --icon=icon.png --overwrite",
+    "build": "electron-packager . 9gag --platform=darwin --arch=x64 --electron-version=2.0.3 --icon=icon.png --overwrite",
     "start": "electron ."
   },
   "author": "",

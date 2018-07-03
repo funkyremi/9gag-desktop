@@ -8,4 +8,11 @@ var mb = menubar({
 
 mb.on('ready', function ready () {
 	console.log('app is ready')
-})
+});
+
+mb.on('after-create-window', () => {
+	let html = mb.window.webContents;
+	html.on('dom-ready', () => {
+		html.executeJavaScript(`document.querySelector(".salty-bottom-ad").remove();`);
+	});
+});
